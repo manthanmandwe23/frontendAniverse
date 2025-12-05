@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*  */
+/* body { font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; } */
+/* .container { max-width: 900px; } */
+
+@keyframes bounce-slow {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+.animate-bounce-slow { animation: bounce-slow 1.4s ease-in-out infinite; }
+
+.like-bounce {
+  animation: likeBounce 0.25s ease-in-out;
+}
+
+@keyframes likeBounce {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.35); }
+  100% { transform: scale(1); }
+}
+
+@keyframes glowFadeIn {
+  0% { opacity: 0; transform: translateY(30px) scale(0.95); filter: brightness(0.6); }
+  100% { opacity: 1; transform: translateY(0) scale(1); filter: brightness(1); }
+}
+
+.glow-animate {
+  opacity: 0;
+}
+.glow-animate.show {
+  animation: glowFadeIn 1.2s ease forwards;
+}
+
+.fade-block {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity .8s ease, transform .8s ease;
+}
+.show-fade {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes pulse-slow {
+  0% { text-shadow: 0 0 6px rgba(99,102,241,0.8); }
+  50% { text-shadow: 0 0 18px rgba(99,102,241,1); }
+  100% { text-shadow: 0 0 6px rgba(99,102,241,0.8); }
+}
+.animate-pulse-slow {
+  animation: pulse-slow 3s infinite;
+}
+/* make the whole app dark and fill height */
+html, body, #root {
+  height: 100%;
+  background: #0a0a0f;   /* same as your page */
+}
+
+body {
+  margin: 0;
+  color: #fff;
+  overflow-x: hidden;     /* kill accidental horizontal scroll */
+}
+
+/* IG-style like burst */
+
+
+@keyframes cardGlow {
+  0% {
+    box-shadow: 0 0 0 rgba(255,105,180,0);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(255,105,180,0.4);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(255,105,180,0);
+  }
+}
+.animate-glow {
+  animation: cardGlow 0.6s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
