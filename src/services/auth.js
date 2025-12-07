@@ -51,7 +51,7 @@ export async function loginUser(payload) {
 export function googleAuthUrl() {
   // If backend expects POST, it might start OAuth flow with a redirect URL.
   // If you have an OAuth start endpoint, open it. Adjust path if needed.
-  return "/api/users/google";
+  return "/users/google";
 }
 
 // export async function uploadAvatar(formData) {
@@ -80,20 +80,18 @@ export async function getAllAnime(params = {}) {
   return api.get("/anime", { params });
 }
 
-
-
 export function createPost(data) {
-  return api.post("/api/posts", data);
+  return api.post("/posts", data);
 }
 
 // Get all posts
 export function getPosts() {
-  return api.get("/api/posts?sort=created_at&order=desc");
+  return api.get("/posts?sort=created_at&order=desc");
 }
 
 // Toggle like
 export function toggleLike(id) {
-  return api.post(`/api/posts/${id}/like`);
+  return api.post(`/posts/${id}/like`);
 }
 
 // What is a Promise?
