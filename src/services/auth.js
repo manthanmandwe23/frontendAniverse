@@ -20,23 +20,22 @@ import api from "../lib/api";
 // You can only use await inside an async function.
 //
 export async function SendEmailOtp(email) {
-  return api.post("/setup/send-Email-otp", { email });
+  // return api.post("/setup/send-Email-otp", { email });
+  return api.post("/setup/send-Email-otp-owner", { email });
   // api.post() returns a Promise (because it’s an async HTTP call using Axios).
   // So, marking the function as async tells JavaScript:
   // “This function will return a Promise — it’s doing an async task.”
-
   // if you wanted to wait for the result inside this function, you could use await like this:
-
   // export async function SendEmailOtp(email) {
   // const response = await api.post("/setup/send-Email-otp", { email });
   // return response.data;
   // }
-
   // // But since you are just returning the Promise directly, you don’t need to use await here — whoever calls this function can await it instead:
 }
 
 export async function VerifyEmail(email, otp) {
-  return api.post("/setup/verify-Email-otp", { email, otp });
+  // return api.post("/setup/verify-Email-otp", { email, otp });
+  return api.post("/setup/verify-Email-otp-owner", { email, otp });
 }
 
 export async function registerUser(payload) {
@@ -93,7 +92,7 @@ export function getPosts() {
 export function toggleLike(id) {
   return api.post(`/posts/${id}/like`);
 }
-
+//
 // What is a Promise?
 // A Promise in JavaScript means:
 // “I’ll give you the result later — not right now.”
