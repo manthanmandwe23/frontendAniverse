@@ -21,7 +21,7 @@ import api from "../lib/api";
 //
 export async function SendEmailOtp(email) {
   // return api.post("/setup/send-Email-otp", { email });
-  return api.post("/setup/send-Email-otp-owner", { email });
+  return api.post("/getup/send-Email-otp", { email });
   // api.post() returns a Promise (because it’s an async HTTP call using Axios).
   // So, marking the function as async tells JavaScript:
   // “This function will return a Promise — it’s doing an async task.”
@@ -35,7 +35,7 @@ export async function SendEmailOtp(email) {
 
 export async function VerifyEmail(email, otp) {
   // return api.post("/setup/verify-Email-otp", { email, otp });
-  return api.post("/setup/verify-Email-otp-owner", { email, otp });
+  return api.post("/getup/verify-Email-otp", { email, otp });
 }
 
 export async function registerUser(payload) {
